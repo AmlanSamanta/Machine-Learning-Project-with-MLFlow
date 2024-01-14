@@ -3,6 +3,7 @@ from mlopsProject.pipeline.stage_01_data_ingestion import DataIngestionTrainingP
 from mlopsProject.pipeline.stage_02_data_validation import DataValidationTrainingPipeline
 from mlopsProject.pipeline.stage_03_data_transformation import DataTransformationTrainingPipeline
 from mlopsProject.pipeline.stage_04_model_trainer import ModelTrainerTrainingPipeline
+from mlopsProject.pipeline.stage_05_model_evaluation import ModelEvaluationTrainingPipeline
 # logger.info("Welcome to the world of custom logging!")
 
 # STAGE_NAME = "Data Ingestion Stage"
@@ -52,6 +53,16 @@ STAGE_NAME = "Model Trainer stage"
 try:
    logger.info(f">>>>>> {STAGE_NAME} started <<<<<<") 
    data_ingestion = ModelTrainerTrainingPipeline()
+   data_ingestion.main()
+   logger.info(f">>>>>> {STAGE_NAME} completed <<<<<<\n\nx==========x")
+except Exception as e:
+        logger.exception(e)
+        raise e
+
+STAGE_NAME = "Model evaluation stage"
+try:
+   logger.info(f">>>>>> {STAGE_NAME} started <<<<<<") 
+   data_ingestion = ModelEvaluationTrainingPipeline()
    data_ingestion.main()
    logger.info(f">>>>>> {STAGE_NAME} completed <<<<<<\n\nx==========x")
 except Exception as e:

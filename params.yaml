@@ -1,5 +1,22 @@
 # key: val
 
+# ElasticNet:
+#   alpha: 0.2
+#   l1_ratio: 0.1
+
+# ElasticNet:
+#   alpha: 0.9
+#   l1_ratio: 0.8
+
+# ElasticNet:
+#   alpha: 0.4
+#   l1_ratio: 0.3
+
+# ElasticNet:
+#   alpha: 0.2
+#   l1_ratio: 0.1
+
+# after analysis of experiments on MLFlow UI, the parameters are finalised
 ElasticNet:
   alpha: 0.2
   l1_ratio: 0.1
