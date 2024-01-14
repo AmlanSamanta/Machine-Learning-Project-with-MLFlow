@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/amlansamanta/Downloads/Machine-Learning-Project-with-MLFlow/mlruns/0/975da60b0b9a41a88bbfc1acbf7dd7cc/artifacts
+end_time: 1705244092098
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 975da60b0b9a41a88bbfc1acbf7dd7cc
+run_name: unique-lark-46
+run_uuid: 975da60b0b9a41a88bbfc1acbf7dd7cc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1705244091085
+status: 3
+tags: []
+user_id: amlansamanta
