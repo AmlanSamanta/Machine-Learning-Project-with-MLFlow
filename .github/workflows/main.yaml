@@ -65,7 +65,7 @@ jobs:
           
   Continuous-Deployment:
     needs: build-and-push-ecr-image
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -88,7 +88,7 @@ jobs:
          
       # - name: Stop and remove container if running
       #   run: |
-      #    docker ps -q --filter "name=mlproj" | grep -q . && docker stop mlproj && docker rm -fv mlproj
+      #    docker ps -q --filter "name=mlopsproj" | grep -q . && docker stop mlopsproj && docker rm -fv mlopsproj
        
       - name: Run Docker Image to serve users
         run: |
