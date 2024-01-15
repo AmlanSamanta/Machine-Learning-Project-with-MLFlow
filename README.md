@@ -1,8 +1,8 @@
-# Machine-Learning-Project-with-MLFlow
+# MLOps-Project-with-MLFlow-Github-Actions-AWS
 
 
 
-## Workflows
+## Workflow
 
 1. Update config.yaml
 2. Update schema.yaml
@@ -45,10 +45,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Now,
-```bash
-open up you local host and port
-```
+### Now open up you local host and port in browser
 
 
 
@@ -57,18 +54,20 @@ open up you local host and port
 [Documentation](https://mlflow.org/docs/latest/index.html)
 
 
-##### cmd
+##### CLI - to fire up mlflow service UI from local 
 - mlflow ui
 
 ### dagshub
 [dagshub](https://dagshub.com/)
 
-MLFLOW_TRACKING_URI=https://dagshub.com/Amlan/Machine-Learning-Project-with-MLFlow.mlflow \
-MLFLOW_TRACKING_USERNAME=Amlan \
-MLFLOW_TRACKING_PASSWORD=5801675fa3e718edb779ace5947164241bfc2243  \
+### MLFlow configurations
+
+MLFLOW_TRACKING_URI = https://dagshub.com/Amlan/Machine-Learning-Project-with-MLFlow.mlflow \
+MLFLOW_TRACKING_USERNAME = Amlan \
+MLFLOW_TRACKING_PASSWORD = 5801675fa3e718edb779ace5947164241bfc2243  \
 python script.py
 
-Run this to export as env variables:
+Run these to export as env variables:
 
 ```bash
 
@@ -105,7 +104,7 @@ export MLFLOW_TRACKING_PASSWORD=5801675fa3e718edb779ace5947164241bfc2243
 
 	4. Pull Your image from ECR in EC2
 
-	5. Lauch your docker image in EC2
+	5. Launch your docker image in EC2
 
 	#Policy:
 
@@ -115,7 +114,7 @@ export MLFLOW_TRACKING_PASSWORD=5801675fa3e718edb779ace5947164241bfc2243
 
 	
 ## 3. Create ECR repo to store/save docker image
-    - Save the URI: 566373416292.dkr.ecr.ap-south-1.amazonaws.com/mlproj
+    - Save the URI: 992382432296.dkr.ecr.us-east-1.amazonaws.com/mlopsproject
 
 	
 ## 4. Create EC2 machine (Ubuntu) 
@@ -123,7 +122,7 @@ export MLFLOW_TRACKING_PASSWORD=5801675fa3e718edb779ace5947164241bfc2243
 ## 5. Open EC2 and Install docker in EC2 Machine:
 	
 	
-	#optinal
+	#optional
 
 	sudo apt-get update -y
 
@@ -140,7 +139,7 @@ export MLFLOW_TRACKING_PASSWORD=5801675fa3e718edb779ace5947164241bfc2243
 	newgrp docker
 	
 # 6. Configure EC2 as self-hosted runner:
-    setting>actions>runner>new self hosted runner> choose os> then run command one by one
+    In Github UI, go to setting>actions>runner>new self hosted runner> choose os> then run the mentioned commands one by one
 
 
 # 7. Setup github secrets:
@@ -151,9 +150,9 @@ export MLFLOW_TRACKING_PASSWORD=5801675fa3e718edb779ace5947164241bfc2243
 
     AWS_REGION = us-east-1
 
-    AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
+    AWS_ECR_LOGIN_URI = 992382432296.dkr.ecr.us-east-1.amazonaws.com/mlopsproject
 
-    ECR_REPOSITORY_NAME = simple-app
+    ECR_REPOSITORY_NAME = mlopsproject
 
 
 
@@ -161,7 +160,7 @@ export MLFLOW_TRACKING_PASSWORD=5801675fa3e718edb779ace5947164241bfc2243
 ## About MLflow 
 MLflow
 
- - Its Production Grade
+ - It is Production Grade
  - Trace all of your expriements
  - Logging & tagging your model
 
