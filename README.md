@@ -136,7 +136,7 @@ export MLFLOW_TRACKING_PASSWORD=5801675fa3e718edb779ace5947164241bfc2243
 
 	#Post successful creation of server
 
-	Click on mlopsProject-user > Click Connect
+	Click on Instance ID link of mlopsProject-server > Click Connect
 
 ## 5. Install and configure docker in EC2 Machine:
 	
@@ -176,22 +176,20 @@ export MLFLOW_TRACKING_PASSWORD=5801675fa3e718edb779ace5947164241bfc2243
 	echo "29fc8cf2dab4c195bb147384e7e2c94cfd4d4022c793b346a6175435265aa278  actions-runner-linux-x64-2.311.0.tar.gz" | shasum -a 256 -c
 	# Extract the installer
 	tar xzf ./actions-runner-linux-x64-2.311.0.tar.gz
-	# Configure
-	# Create the runner and start the configuration experience - runner group name: default; runner name: self-hosted; additional label: none; work folder: default value _work
+	# Configure - Create the runner and start the configuration experience - Provide runner group name: default; runner name: self-hosted; additional label: none; work folder: default value _work
 	./config.sh --url https://github.com/AmlanSamanta/Machine-Learning-Project-with-MLFlow --token ABX5PN5KJ7UDNPNDOJZX5EDFVC65K
 	./run.sh
-	# Using your self-hosted runner
-	# Use this YAML in your workflow file for each job
+	# Using your self-hosted runner - Use this YAML in your workflow file for each job
 	runs-on: self-hosted
 	```
 
 # 7. Setup github secrets:
 
-	Settings > Security > Secrets and variables > Actions > Actions secrets and variables > New repository secret
+	Github Repo sSettings > Security > Secrets and variables > Actions > Actions secrets and variables > New repository secret
 
-    AWS_ACCESS_KEY_ID=<>
+    AWS_ACCESS_KEY_ID = <your secret acess key id>
 
-    AWS_SECRET_ACCESS_KEY=
+    AWS_SECRET_ACCESS_KEY = <your secret acess key>
 
     AWS_REGION = us-east-1
 
